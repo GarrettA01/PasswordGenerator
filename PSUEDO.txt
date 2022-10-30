@@ -1,0 +1,16 @@
+PSUDEOCODE
+
+- Create variable arrays for each character set (A, a, 0-9, !)
+- Create prompt for password length
+- Create var that changed selection into number type
+- Create if/else statement for when length is either < 8 or > 128
+- Create confirmations for each charcter set (A, a, 0-9, !)
+- Create if/else statement for when no charcters are selected
+- Create empty variable for selected charcter sets to go in
+- Create true/false confirms for each character set, if true, throw array
+into empty variable 
+- Create empty variable for final password
+- Create for loop where i=0, i < password length, i++
+- Create random array variable within for loop, use math thingy, * wanted characters length, creates randomized characters
+- Fill final password var with random character array
+- Send password to html
