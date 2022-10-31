@@ -27,9 +27,10 @@ if (!hasLower && !hasUpper && !hasNumbers && !hasSpecial) {
   return "ERROR";
 }
 
-
+// Array for chosen character sets to get dumped into, in order at this point
 var usersPasswordChoices = [];
 
+// If true, character array set dumped into above var, if false, array set left out
 if(hasLower){
   usersPasswordChoices = usersPasswordChoices.concat(lowerCaseArr);
 }
@@ -43,20 +44,23 @@ if(hasSpecial){
   usersPasswordChoices = usersPasswordChoices.concat(specialArr);
 }
 
+// variable for randomized password to get dumped into
 var randomizedPassword = [];
 
+// for loop that randomizes userChoices array and dumps into randomized password array
 for (i = 0; i < passwordLength; i++) {
   random = Math.floor(Math.random() * usersPasswordChoices.length);
   randomizedPassword = randomizedPassword.concat(usersPasswordChoices[random]);
 }
 
+//Sends successfully created password to HTML
 randomizedPassword = randomizedPassword.join("");
 
 return randomizedPassword
 
+}
+}
 
-}
-}
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
