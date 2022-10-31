@@ -27,7 +27,7 @@ if (!hasLower && !hasUpper && !hasNumbers && !hasSpecial) {
   return "ERROR"
 } else {
 
-// - Create empty variable for selected charcter sets to go in (object)
+
 var usersPasswordChoices = []
 
 if(hasLower){
@@ -41,6 +41,13 @@ if(hasNumbers){
 }
 if(hasSpecial){
   usersPasswordChoices = usersPasswordChoices.concat(specialArr);
+}
+
+var randomizedPassword
+
+for (i = 0; i < passwordLength; i++) {
+  random = Math.floor(Math.random() * usersPasswordChoices.length);
+  randomizedPassword = randomizedPassword.concat(usersPasswordChoices[random]);
 }
 
 
