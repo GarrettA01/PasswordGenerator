@@ -10,7 +10,7 @@ var passwordLength = parseInt(prompt("Please select a password length between 8 
 
 if (passwordLength < 8 || passwordLength > 128) {
   alert("Please make sure selection is between 8 and 128 characters!")
-  return "ERROR"
+  return "ERROR";
 } else {
 
 
@@ -23,12 +23,12 @@ var hasNumbers = confirm("Would you like numbers in your password? (0-9)")
 var hasSpecial = confirm("Would you like special characters in your password? (!, @, etc.)")
 
 if (!hasLower && !hasUpper && !hasNumbers && !hasSpecial) {
-  alert ("You must select at least one character type!")
-  return "ERROR"
-} else {
+  alert ("You must select at least one character type!");
+  return "ERROR";
+}
 
 
-var usersPasswordChoices = []
+var usersPasswordChoices = [];
 
 if(hasLower){
   usersPasswordChoices = usersPasswordChoices.concat(lowerCaseArr);
@@ -43,15 +43,18 @@ if(hasSpecial){
   usersPasswordChoices = usersPasswordChoices.concat(specialArr);
 }
 
-var randomizedPassword
+var randomizedPassword = [];
 
 for (i = 0; i < passwordLength; i++) {
   random = Math.floor(Math.random() * usersPasswordChoices.length);
   randomizedPassword = randomizedPassword.concat(usersPasswordChoices[random]);
 }
 
+randomizedPassword = randomizedPassword.join("");
 
-}
+return randomizedPassword
+
+
 }
 }
 // Assignment Code
