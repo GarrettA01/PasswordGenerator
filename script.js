@@ -13,9 +13,7 @@ if (passwordLength < 8 || passwordLength > 128) {
   return "ERROR";
 } else {
 
-
-
-
+  
 // Confirmations for each character selection, if statement for if none are chosen
 var hasLower = confirm("Would you like lowercase letters in your password? (a)")
 var hasUpper = confirm("Would you like uppercase letters in your password? (A)")
