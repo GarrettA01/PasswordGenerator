@@ -6,8 +6,8 @@ This password generator can generate a password anywhere from 8 to 128 character
 
 ## Contents
 
-1.  [Deployed Page] (#deployed-page)
-2.  [Credits] (#credits)
+1.  [Deployed Page](#deployed-page)
+2.  [Credits](#credits)
 
 ## Deployed Page
 
